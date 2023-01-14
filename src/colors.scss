@@ -1,0 +1,73 @@
+:root {
+    --color-bkg: rgb(34, 29, 48);
+    --color-text: rgb(225, 215, 255);
+
+    --color-focus: #fd0d85;
+    --color-focus: oklch(64.61% 0.26 0);
+
+    --color-hightlight1: #eeff00;
+    --color-hightlight2: #1dfcb0;
+    --color-hightlight2: oklch(87.84% 0.189 162);
+    --color-hightlight3: #85d1b8;
+
+    --color-shade: rgb(64, 12, 122);
+
+    --color-1: rgb(43, 18, 41);
+    --color-2: rgb(51, 44, 61);
+    --color-3: hsl(265, 25%, 25%);
+    --color-3: rgb(113, 81, 158);
+    --color-4: hsl(265, 20%, 20%);
+    --color-4: rgb(92, 68, 128);
+    --color-5: hsl(265, 15%, 15%);
+    --color-5: rgb(75, 57, 99);
+    --color-6: hsl(265, 10%, 10%);
+    --color-6: rgb(53, 44, 68);
+    
+    --rgb-1: #1cffa8;
+    --rgb-1: oklch(87.79% 0.222 153);
+    --rgb-2: #2207fe;
+    --rgb-2: oklch(46.03% 0.306 267.35);
+    --rgb-3: #9808fb;
+    --rgb-3: oklch(55.74% 0.291 302.29);
+    --rgb-4: #e80121;
+    --rgb-4: oklch(58.67% 0.238 25.94);
+
+    --rgb-bro: linear-gradient(
+        45deg, 
+        var(--rgb-1) 0%, 
+        var(--rgb-2), 
+        var(--rgb-3) 50%, 
+        var(--rgb-3), 
+        var(--rgb-4) 100%
+    );
+
+    /* --rgb-bro: linear-gradient(
+        45deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(289deg 100% 21%) 11%,
+        hsl(315deg 100% 27%) 22%,
+        hsl(329deg 100% 36%) 33%,
+        hsl(337deg 100% 43%) 44%,
+        hsl(357deg 91% 59%) 56%,
+        hsl(17deg 100% 59%) 67%,
+        hsl(34deg 100% 53%) 78%,
+        hsl(45deg 100% 50%) 89%,
+        hsl(55deg 100% 50%) 100%
+    ); */
+
+    --grad-dark: rgb(0, 0, 0);
+    --grad-light: rgb(36, 36, 36);
+
+    --gradient-slash: linear-gradient(to right top, 
+    var(--grad-light) 0%, 
+    var(--grad-dark) 0%, 
+    var(--grad-dark) 20%, 
+    var(--grad-light) 0%, 
+    var(--grad-light) 40%, 
+    var(--grad-dark) 0%, 
+    var(--grad-dark) 60%, 
+    var(--grad-light) 0%, 
+    var(--grad-light) 80%, 
+    var(--grad-dark) 0%, 
+    var(--grad-dark) 100%);
+}
