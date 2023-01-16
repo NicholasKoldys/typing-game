@@ -1,0 +1,60 @@
+.pad {
+    flex: 1 0 clamp(.1em, 1em, 2em);
+    font-size: clamp(.6em, 2vw, 2em);
+    font-weight: 900;
+    color: var(--color-hightlight3);
+
+    border: transparent .1em double;
+    padding: 1% 1%;
+    margin: .04em;
+
+    display: inline-block;
+
+    &.active {
+        color: white;
+        mix-blend-mode: multiply;
+        background-color: rgb(23, 7, 37);
+
+        border: var(--color-focus) .1em double;
+    }
+
+    &.home-key {
+        color: var(--color-hightlight1);
+    }
+
+    &.pressedKey.correct {
+        color: var(--color-shade);
+        background-color: var(--color-hightlight2);
+        border: var(--color-hightlight1) .1em double;
+    }
+
+    &.pressedKey.wrong {
+        color: var(--color-shade);
+        background-color: var(--color-focus);
+        border: var(--rgb-4) .1em double;
+    }
+
+    &.BKSP {
+        flex: 1 0 6ch;
+    }
+    
+    &.TAB {
+        flex: 1 0 4ch;
+    }
+    
+    &.CAP {
+        flex: 1 0 5ch;
+    }
+    
+    &.ENT {
+        flex: 1 0 7ch;
+    }
+    
+    &.LSHFT {
+        flex: 1 0 7ch;
+    }
+    
+    &.RSHFT {
+        flex: 1 0 9ch;
+    }
+}
