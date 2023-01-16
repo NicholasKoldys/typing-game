@@ -1,0 +1,155 @@
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border: .1em red dashed;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-container {
+        flex: 0 1 clamp(30vw, 50ch, 40vw);
+
+        min-height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+            background-color: aliceblue;
+            max-width: 5em;
+            animation: color-change 20s infinite alternate ease;
+
+            @keyframes color-change {
+                0% {
+                    background-color: #fbff00;
+                    background-color: hsl(155, 100%, 50%);
+                }
+                12% {
+                    background-color: #ff5e00;
+                    background-color: hsl(170, 100%, 50%);
+                }
+                24% {
+                    background-color: #ff0000;
+                    background-color: hsl(195, 100%, 50%);
+                }
+                36% {
+                    background-color: #ff0077;
+                    background-color: hsl(220, 100%, 50%);
+                }
+                48% {
+                    background-color: #9900ff;
+                    background-color: hsl(245, 100%, 50%);
+                }
+                60% {
+                    background-color: #8400ff;
+                    background-color: hsl(270, 100%, 50%);
+                }
+                72% {
+                    background-color: #0400ff;
+                    background-color: hsl(295, 100%, 50%);
+                }
+                84% {
+                    background-color: #00ffd5;
+                    background-color: hsl(320, 100%, 50%);
+                }
+                96% {
+                    background-color: #00ff4c;
+                    background-color: hsl(345, 100%, 50%);
+                }
+                100% {
+                    background-color: #bbff00;
+                    background-color: hsl(360, 100%, 50%);
+                }
+            }
+        }
+    }
+
+    .container {
+        flex: 0 1 clamp(50vw, 50ch, 65vw);;
+        border: #84beff dashed .1em;
+
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        h2 {
+            flex: 0 1;
+        }
+
+        a {
+            flex: 0 1;
+
+            border: .1em transparent double;
+            min-width: 30%;
+            height: 100%;
+            padding: .5em;
+
+            transition: box-shadow .8s ease;
+        }
+
+        a:hover {
+            border: .1em #84beff double;
+            box-shadow: #1f87ff -1px 3px 8px 5px inset, rgb(11, 50, 94) 2px 5px 16px 0px, 5px 5px 15px 5px rgba(0,0,0,0);
+        }
+
+        svg {
+            border-radius: 50%;
+            height: 100%;
+        }
+
+        .reactLink {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reactLink > svg  {            
+            height: 60%;
+            width: 60%;
+
+            animation: logo-spin 11s infinite 0s ease;
+
+            @keyframes logo-spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                50% {
+                    transform: rotate(360deg) scale(1.3);
+                }
+            }
+        }
+
+        .viteLink > svg > path:nth-of-type(2) {
+            animation: logo-scale 5s infinite 0s ease;
+
+            @keyframes logo-scale {
+                0% {
+                    transform: scale(1.0);
+                }
+                50% {
+                    transform: translateX(-5%) translateY(-30%) rotate(.05turn) scale(1.35);
+                }
+                100% {
+                    transform: scale(1.0);
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    // a:nth-of-type(2) .logo {
+    //     animation: logo-spin infinite 20s linear;
+    // }
+}
