@@ -1,0 +1,33 @@
+.wordList {
+
+    > ul {
+        margin: 0;
+        list-style: none;
+        padding: .2em;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2%;
+
+        > li {
+            flex: 1 0 clamp(8%, 10ch, 20%);
+            font-size: 100%;
+            text-align: center;
+            letter-spacing: .2rem;
+
+            margin-bottom: .3em;
+            border-bottom: .3em transparent solid;
+            background-color: var(--color-4);
+
+            &.selected {
+                color: var(--color-focus);
+                font-weight: 900;
+                border-bottom: .3em var(--color-hightlight1) solid;
+                background-color: var(--color-hightlight2);
+            }
+        }
+    }
+}
