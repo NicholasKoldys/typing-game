@@ -1,0 +1,63 @@
+.container {
+  position: relative;
+
+  &::before, 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  &::before {
+    z-index: -2;
+  }
+
+  &::after {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.01);
+  }
+
+  &.active {
+    &::before {
+      background-image: radial-gradient(circle, var(--rgb-1) 5%, transparent 30%),
+        radial-gradient(circle, var(--rgb-2) 10%, transparent 30%),
+        radial-gradient(circle, var(--rgb-3) 15%, transparent 40%),
+        radial-gradient(circle, var(--rgb-4) 25%, transparent 40%);
+      background-position: 100% 100%, 0% 0%, 0% 0%, 50% 50%;
+      background-size: 200% 200%;
+      background-repeat: no-repeat;
+      animation: rgb-waves 10s infinite alternate linear;
+
+      @keyframes rgb-waves {
+        0% {
+          background-position: 100% 100%, 0% 0%, 50% 50%, 0% 0%;
+        }
+        25% {
+          background-position: 50% 100%, 50% 0%, 50% 50%, 100% 50%;
+        }
+        50% {
+          background-position: 0% 100%, 100% 0%, 50% 50%, 100% 100%;
+        }
+        75% {
+          background-position: 0% 50%, 100% 50%, 50% 50%, 50% 100%;
+        }
+        100% {
+          background-position: 0% 0%, 100% 100%, 50% 50%, 50% 50%;
+        }
+      }
+    }
+
+    &::after {
+      animation: background-fade 3s linear;
+
+      @keyframes background-fade {
+        0% {
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+        100% {
+          background-color: rgba(0, 0, 0, 0);
+        }
+      }
+    }
+  }
+}

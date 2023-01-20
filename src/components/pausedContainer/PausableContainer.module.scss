@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    // box-shadow: 0 16px 120px 0 var(--shadow);
+    padding: 0.4em;
+    z-index: 1;
+    transition: background-color 10s ease-in;
+
+    &.overlay {
+        position: relative;
+    
+        &::after {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+    
+        &.hidden {
+            
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0 0 0 0;
+            
+                background-color: rgba(0, 0, 0, 0.555);
+                background-image: var(--gradient-slash);
+                background: var(--gradient-slash);
+                opacity: .8;
+                display: block;
+                z-index: 8;
+            }
+        }
+    }
+}
+
