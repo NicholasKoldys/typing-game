@@ -1,0 +1,47 @@
+.display {
+    font-size: 3em;
+    font-weight: 900;
+    text-align: center;
+
+    border: transparent .2em solid;
+    padding: .5em 0;
+
+    &.active {
+        color: black;
+        border: var(--color-shade) 0.2em solid;
+    }
+
+    > span.typed {
+        color: var(--color-hightlight3);
+
+        &.complete {
+            color: var(--color-hightlight2);
+        }
+    }
+
+    > span.last-key {
+        &.correct {
+            color: var(--color-hightlight3);
+        }
+
+        &.wrong {
+            color: var(--color-focus);
+        }
+
+        &.complete {
+            color: var(--color-hightlight2);
+        }
+    }
+    
+    > .wpm {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: var(--color-shade);
+        padding: .2em .5em;
+
+        color: var(--color-hightlight1);
+        font-size: .2em;
+    }
+}
