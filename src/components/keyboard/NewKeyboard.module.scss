@@ -1,0 +1,16 @@
+.typed-input {
+  text-align: center;
+  background-color: transparent;
+  pointer-events: none;
+  line-height: 2em;
+
+  border: none;
+  margin: 1em 0 1em 0;
+  height: 100%;
+  width: 100%;
+
+  &.active {
+    background-color: var(--color-6);
+    pointer-events: all;
+  }
+}
