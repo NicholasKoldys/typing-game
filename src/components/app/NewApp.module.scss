@@ -1,0 +1,6 @@
+.app {
+    border: 0.5em outset;
+    user-select: none;
+
+    width: clamp(40ch, 100%, 160ch);
+}

@@ -1,0 +1,86 @@
+svg.power-on {
+    position: absolute;
+    inset: 0;
+    margin: auto auto;
+    
+    width: clamp(7em, 75%, 10em);
+    min-height: clamp(7em, 75%, 10em);
+    fill: #000;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+
+    z-index: 9;
+
+    overflow: visible;
+    transition: height .1s, width .1s;
+
+    > .dash {
+        fill: #00000000;
+        stroke: #000;
+        stroke-width: .8em;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 0;
+        animation: dash-out 3s linear forwards;
+
+        @keyframes dash-out {
+            from {
+                stroke-dashoffset: 0;
+            }
+            to {
+                stroke-dashoffset: -1;
+            }
+        }
+    }
+
+    > .inner {
+        fill: #073d2993;
+        transition: fill .3s ease-in-out;
+    }
+
+    &.hidden {
+        width: 0;
+        min-height: 0;
+
+        transition: height 1s ease, width .5s ease;
+    }
+
+    &:hover {
+        > .dash {
+            // stroke-dashoffset: 1;
+            fill: #9affda;
+            stroke: #00ffa0;
+            animation: dash-in 1s linear forwards, strobe 1s linear alternate infinite 1.4s;
+            ;
+            transition: fill 1.6s ease 1s, stroke 1.3s ease 1.3s, filter 1.8s ease 1.3s;
+            filter: 
+                drop-shadow(0 0 30px #00ffa0);
+
+            @keyframes dash-in {
+                from {
+                    stroke-dashoffset: -1;
+                }
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+        }
+
+        > .inner {
+            fill: #9affda;
+            animation: strobe 1s linear alternate infinite 1.4s;
+            transition: fill 1.6s ease 1s, filter 1.8s ease 1.3s;
+            filter: 
+                drop-shadow(0 0 30px #00ffa0);
+        }
+
+        @keyframes strobe {
+            from {
+                filter: 
+                    drop-shadow(0 0 30px #00ffa0);
+            }
+            to {
+                filter: 
+                    drop-shadow(0 0 10px #00ffa0);
+            }
+        }
+    }
+}
